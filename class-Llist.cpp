@@ -43,6 +43,7 @@ public:
 	void diplayList();
 	void appendList(int info);
 	void deleteList(int info);
+	Node* getNode();
 };
 
 
@@ -78,6 +79,10 @@ void Linklist::diplayList(){
 	cout<<"NULL"<<endl;
 }
 
+Node* Linklist::getNode(){
+
+
+}
 void Linklist::appendList(int info){
 	
 	Node* newNode = new Node();
@@ -103,15 +108,23 @@ void Linklist::appendList(int info){
 
 int main()
 {
-
+	int x;
+	char ch;
 	Linklist obj;
-	obj.appendList(100);
-	obj.diplayList();
-	obj.appendList(200);
-	obj.diplayList();
-	obj.appendList(300);
-	obj.diplayList();
-
+	do{
+		cout<<"enter the value"<<endl;
+		cin>>x;
+		obj.appendList(x);
+		obj.diplayList();
+		cout<<"to quit press Y else N"<<endl;
+		cin>>ch;
+		if(ch=='Y')
+		break;
+	}while(ch!='Y');
+//	obj.appendList(200);
+//	obj.diplayList();
+//	obj.appendList(300);
+//	obj.diplayList();
 
 }
 
